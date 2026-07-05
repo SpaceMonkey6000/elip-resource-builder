@@ -52,3 +52,29 @@
     targets.forEach(function (t) { if (t) spy.observe(t); });
   }
 })();
+
+(function () {
+  // Swap each resource card's placeholder icon for the destination's real
+  // brand logo (fetched into assets/logos/<host>.png). If a logo is missing
+  // or fails to load, we silently keep the original emoji/SVG icon.
+  function hostOf(url) {
+    try { return new URL(url, location.href).hostname.replace(/^www\./, ''); }
+    catch (e) { return null; }
+  }
+  document.querySelectorAll('a.res').forEach(function (a) {
+    var ico = a.querySelector('.ico');
+    // gate.js may have moved the real URL into data-gate-href while locked.
+    var url = a.getAttribute('data-gate-href') || a.getAttribute('href');
+    var host = url && /^https?:/i.test(url) ? hostOf(url) : null;
+    if (!ico || !host) return;
+    var img = new Image();
+    img.className = 'res-logo';
+    img.alt = '';
+    img.setAttribute('aria-hidden', 'true');
+    // NB: don't set loading="lazy" here — a detached Image() with lazy never
+    // fires load until it's in the viewport, which it never reaches pre-insert.
+    img.onload = function () { ico.classList.add('has-logo'); ico.insertBefore(img, ico.firstChild); };
+    img.onerror = function () { /* keep the existing icon */ };
+    img.src = 'assets/logos/' + host + '.png';
+  });
+})();

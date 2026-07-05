@@ -38,6 +38,35 @@
 
   var waLink = (cfg.whatsappFor ? cfg.whatsappFor(source) : (cfg.WHATSAPP_COMMUNITY_URL || '#'));
 
+  var GATE_SEL = 'a.res, a[data-gate]';
+
+  // ============================================================
+  //  Lock / unlock the outbound links themselves
+  // ============================================================
+  // Left-click interception alone is not enough: middle-click, ⌘/Ctrl-click
+  // and "Open link in new tab" would follow the real href and skip the gate.
+  // So while the visitor is un-gated we move each resource's real URL into
+  // data-gate-href and neutralise the visible href. Once they convert we put
+  // the real hrefs back and every link (incl. new-tab) works normally.
+  function armLinks() {
+    if (isUnlocked()) return;                 // already a lead → leave hrefs intact
+    document.querySelectorAll(GATE_SEL).forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href || href.charAt(0) === '#' || href.indexOf('javascript:') === 0) return;
+      if (a.hasAttribute('data-gate-href')) return;
+      a.setAttribute('data-gate-href', href);
+      a.setAttribute('href', '#unlock');      // real destination now lives only in data-gate-href
+    });
+  }
+  function disarmLinks() {
+    document.querySelectorAll('a[data-gate-href]').forEach(function (a) {
+      a.setAttribute('href', a.getAttribute('data-gate-href'));
+      a.removeAttribute('data-gate-href');
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', armLinks);
+  else armLinks();
+
   // ============================================================
   //  Intercept clicks on gated outbound links
   // ============================================================
@@ -45,13 +74,15 @@
   // anything explicitly marked [data-gate]. Site nav, WhatsApp/agent
   // CTAs and in-page anchors are NOT gated.
   document.addEventListener('click', function (ev) {
-    if (ev.defaultPrevented || ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
-    var a = ev.target.closest ? ev.target.closest('a.res, a[data-gate]') : null;
+    var a = ev.target.closest ? ev.target.closest(GATE_SEL) : null;
     if (!a) return;
-    var href = a.getAttribute('href');
+    // Real destination is stashed in data-gate-href while locked.
+    var href = a.getAttribute('data-gate-href') || a.getAttribute('href');
     if (!href || href.charAt(0) === '#' || href.indexOf('javascript:') === 0) return;
     if (isUnlocked()) return;                 // already a lead → let the click through
+    // Locked: swallow every click variant (incl. modifier / middle) and gate.
     ev.preventDefault();
+    if (ev.button !== 0 || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
     openGate(href);
   }, true);
 
@@ -158,6 +189,7 @@
 
       function unlock() {
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ at: Date.now(), source: source })); } catch (e) {}
+        disarmLinks();          // restore real hrefs so every link now opens directly
         forward(win);
         closeGate();
       }

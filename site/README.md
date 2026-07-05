@@ -45,10 +45,15 @@ WHATSAPP_LINKS: { swe: '', pm: '', consulting: '', analyst: '' }
 Leave a per-track value blank to fall back to the default. Every "Join community" button and the gate link resolve from here automatically.
 
 ## How the gate works
-- First visit → a full-screen form (name, WhatsApp number, email, target role) over blurred content.
+- All content is freely browsable. The gate only fires when a visitor tries to open a curated **outbound resource link** (`<a class="res">`).
+- First such click → a full-screen form (name, WhatsApp number, email, target role) over blurred content.
 - The **target role is pre-selected** from the page's `data-source`, and the lead is tagged with `source_page` so you can see which community each person came from.
-- On submit → row inserted into Supabase → `localStorage['elip_access']` set → content unlocks on that device (once per visitor).
+- On submit → row inserted into Supabase → `localStorage['elip_access']` set → **every** resource link unlocks on that device (once per visitor).
+- **Bypass-proof:** while a visitor is un-gated, each resource's real URL is held in `data-gate-href` and the visible `href` is neutralised, so middle-click, ⌘/Ctrl-click and "Open in new tab" can't skip the form either. Real hrefs are restored the moment they convert.
 - **Before you add keys**, the gate still works: leads are queued into `localStorage['elip_leads_queue']` so nothing is lost during setup. A console warning reminds you to configure Supabase.
+
+## Resource logos
+Each resource card shows the destination's real brand logo. These are pre-fetched into `assets/logos/<host>.png` (keyed by domain) and injected by `app.js`; any card whose logo is missing falls back to its original emoji/SVG icon. To add a logo for a new link, drop a `<host>.png` in that folder.
 
 ## Sharing into communities
 Drop the relevant page link into each group:
