@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Resume Playbook — beat the ATS &amp; write bullets that land | elip resources</title>
+<meta name="description" content="The universal, ATS-proof resume playbook: how parsers really work, the XYZ bullet formula, safe fonts and file formats, junior metrics, and the best free templates." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%230E9F6E'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/config.js"></script>
+</head>
+<body data-source="general">
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span>elip <small>/ resources</small></a>
+    <nav class="nav-links">
+      <a class="nlink" href="index.html#tracks">Tracks</a>
+      <a class="nlink" href="resume.html">Resume Playbook</a>
+      <a class="nlink" href="index.html#villain">Why it's broken</a>
+      <a class="nlink" href="index.html#elip">The agent</a>
+      <a class="btn btn-wa btn-sm" data-wa-community href="#">💬 Join community</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="thero">
+  <div class="wrap">
+    <a class="back" href="index.html">← back home</a>
+    <span class="eyebrow">The universal playbook</span>
+    <h1>Your resume has two<br/>readers. Beat them both.</h1>
+    <p class="lede">First a robot parses you into a database. Then a human skims you in six seconds. Master these mechanics once and every application you send gets fairer — no matter which track you're on.</p>
+    <div class="metabar">
+      <div><div class="k">Reader 1</div><div class="v">The ATS parser 🤖</div></div>
+      <div><div class="k">Reader 2</div><div class="v">The 6-second skim 👀</div></div>
+      <div><div class="k">Your weapon</div><div class="v">The XYZ formula</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- JUMP NAV -->
+<div class="jump">
+  <div class="wrap jump-inner">
+    <a href="#ats">Beat the ATS</a>
+    <a href="#format">Format &amp; fonts</a>
+    <a href="#keywords">Keywords</a>
+    <a href="#xyz">XYZ formula</a>
+    <a href="#junior">Junior metrics</a>
+    <a href="#levels">5-level bullets</a>
+    <a href="#templates">Templates</a>
+  </div>
+</div>
+
+<!-- ATS -->
+<section class="sec" id="ats">
+  <div class="wrap narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Reader 1 · the machine</span>
+      <h2>The ATS isn't scoring you. It's parsing you — badly.</h2>
+      <p>Workday, Greenhouse, Lever, Taleo, iCIMS — they're not robot judges handing out scores out of 100. They're parsing engines that dump your document into database fields. When the parse fails, your metrics turn to gibberish and you become invisible to the recruiter's search. Rejection by formatting, not by merit.</p>
+    </div>
+
+    <div class="dodont reveal">
+      <div class="dd dont">
+        <h4>💀 What silently kills the parse</h4>
+        <ul>
+          <li><b>Two-column layouts.</b> Parsers read left-to-right, so the sidebar merges into your job titles. Instant gibberish.</li>
+          <li><b>Skill bars &amp; star ratings.</b> The ATS reads zero data from graphics. Your "expert Python" becomes invisible.</li>
+          <li><b>Icon-only links.</b> A GitHub logo with no URL text = the parser never sees your portfolio.</li>
+          <li><b>Headers &amp; footers.</b> Contact info up there is routinely ignored. Keep everything in the body.</li>
+          <li><b>Renamed sections.</b> "My Journey" instead of "Experience" gets dropped into a text void.</li>
+        </ul>
+      </div>
+      <div class="dd do">
+        <h4>✅ What parses clean, every time</h4>
+        <ul>
+          <li><b>One single column,</b> top to bottom, summary to education.</li>
+          <li><b>Plain-text skills,</b> comma-separated. The ATS indexes explicit lists heavily.</li>
+          <li><b>Spelled-out URLs</b> for LinkedIn, GitHub, portfolio.</li>
+          <li><b>Standard headings:</b> Summary, Experience, Education, Skills.</li>
+          <li><b>All content inside 1-inch margins</b> — nothing in the header/footer zone.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- FORMAT & FONTS -->
+<section class="sec" id="format">
+  <div class="wrap narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">File format &amp; typography</span>
+      <h2>The boring choices that decide if you're readable.</h2>
+      <p>Font selection is a technical requirement, not an aesthetic one. On Linux-based ATS servers, "designer" fonts break — and a broken glyph breaks keyword matching.</p>
+    </div>
+
+    <div class="grid-2 reveal">
+      <div class="card">
+        <span class="badge" style="color:var(--teal-deep);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;">FILE FORMAT</span>
+        <h3 style="font-size:20px;margin:10px 0 12px;">.docx is the safe default</h3>
+        <p style="color:var(--ink-soft);font-size:15px;">.docx parses cleanly in <b>95–100%</b> of cases across major platforms. Multi-column PDFs fail ~<b>31%</b> of the time. Text-based PDFs (exported from Word or LaTeX) are safe; image-based or design-software PDFs render blank to the parser.</p>
+      </div>
+      <div class="card">
+        <span class="badge" style="color:var(--coral);font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;">SMART QUOTES</span>
+        <h3 style="font-size:20px;margin:10px 0 12px;">Kill the curly apostrophes</h3>
+        <p style="color:var(--ink-soft);font-size:15px;">Word's "smart quotes" often render as question marks in an ATS, breaking word-boundary detection. Turn them off. Same energy as ligature bugs turning "Office" into "of?ce".</p>
+      </div>
+    </div>
+
+    <div class="dodont reveal" style="margin-top:22px;">
+      <div class="dd do">
+        <h4>🅰️ Safe fonts (map perfectly)</h4>
+        <ul>
+          <li>Calibri</li><li>Arial / Helvetica</li><li>Times New Roman</li><li>Garamond</li><li>Inter · Computer Modern (LaTeX)</li>
+        </ul>
+      </div>
+      <div class="dd dont">
+        <h4>🅱️ Risky fonts (ligature bugs)</h4>
+        <ul>
+          <li>Montserrat, Poppins, Avenir — "fi"/"fl" break</li>
+          <li>Fira Code, JetBrains Mono &amp; other mono "dev" fonts → broken fallbacks</li>
+          <li>Anything from a Canva graphic template</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- KEYWORDS -->
+<section class="sec" id="keywords">
+  <div class="wrap narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Lexical matching</span>
+      <h2>The ATS is painfully literal. Mirror the job description.</h2>
+      <p>"ReactJS" is not "React.js". "k8s" is not "Kubernetes". "JS" is not "JavaScript". The parser doesn't do synonyms — so use the exact terminology from the posting, and include both the acronym and the full term.</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card"><h4 style="font-size:16px;">Spell out both</h4><p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">"Amazon Web Services (AWS)", "Continuous Integration / Continuous Deployment (CI/CD)". Capture every search.</p></div>
+      <div class="card"><h4 style="font-size:16px;">A real Skills section</h4><p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Mandatory. The ATS indexes an explicit comma-separated list far more heavily than skills buried in prose.</p></div>
+      <div class="card"><h4 style="font-size:16px;">Context, not stuffing</h4><p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Weave keywords into real bullets. White-text keyword stuffing is detected and penalized by modern teams.</p></div>
+    </div>
+    <div class="callout reveal" style="margin-top:22px;">
+      <span class="cico">🎯</span>
+      <p>Each track page has a <b>role-specific keyword table</b> — the exact terms recruiters search for engineers, PMs, consultants and analysts. <a class="mono" style="color:var(--teal-deep);" href="index.html#tracks">Grab yours →</a></p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- XYZ -->
+<section class="sec" id="xyz" style="background:var(--paper-2);">
+  <div class="wrap narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Reader 2 · the human</span>
+      <h2>The XYZ formula: the six-second weapon.</h2>
+      <p>Popularized by Google recruiters and now the gold standard. STAR is too wordy for paper (35–45 words); PAR is too sparse (12–18). XYZ hits the sweet spot (18–25 words) and puts the number <em>first</em> — hooking the reader before they skim past.</p>
+    </div>
+
+    <div class="callout reveal" style="border-left-color:var(--teal);background:#fff;font-size:20px;margin-bottom:26px;">
+      <span class="cico">🧪</span>
+      <p style="font-family:var(--font-display);font-weight:600;">Accomplished <span class="hl">[X]</span>, as measured by <span class="hl">[Y]</span>, by doing <span class="hl">[Z]</span>.</p>
+    </div>
+
+    <div class="ba reveal">
+      <div class="col bad">
+        <span class="lab">✕ Task-based</span>
+        <blockquote>"Built REST APIs using Spring Boot and MySQL."</blockquote>
+        <p style="font-size:13px;color:var(--ink-faint);margin:12px 0 0;">Technically true. Utterly forgettable. No scale, no impact.</p>
+      </div>
+      <div class="col good">
+        <span class="lab">✓ XYZ-based</span>
+        <blockquote>"Reduced search latency by <b>65%</b> by implementing Elasticsearch caching, improving user retention by <b>12%</b>."</blockquote>
+        <p style="font-size:13px;color:var(--teal-deep);margin:12px 0 0;">Leads with the metric (Y), names the method (Z), ends with impact (X).</p>
+      </div>
+    </div>
+
+    <div class="dodont reveal" style="margin-top:26px;">
+      <div class="dd dont">
+        <h4>🚫 Passive openers reviewers penalize</h4>
+        <ul><li>"Responsible for…"</li><li>"Helped with…"</li><li>"Was involved in…"</li><li>"Assisted with…"</li></ul>
+      </div>
+      <div class="dd do">
+        <h4>⚡ Strong action verbs</h4>
+        <ul><li>Engineered · Architected · Spearheaded</li><li>Optimized · Streamlined · Accelerated</li><li>Synthesized · Modeled · Forecasted</li><li>Orchestrated · Overhauled · Mitigated</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- JUNIOR -->
+<section class="sec" id="junior">
+  <div class="wrap narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">No revenue yet? No problem</span>
+      <h2>Measure the engine, not the sales.</h2>
+      <p>Junior candidates and side-project builders rarely have user bases or revenue. So swap business metrics for <b>technical metrics</b> — they prove rigor just as convincingly.</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card">
+        <h4 style="font-size:16px;color:var(--teal-deep);">Performance</h4>
+        <p style="font-size:14.5px;color:var(--ink-soft);margin-top:8px;">"Reduced data rendering time by <b>20%</b> by implementing WebSocket connections on a real-time dashboard."</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:16px;color:var(--teal-deep);">Scale</h4>
+        <p style="font-size:14.5px;color:var(--ink-soft);margin-top:8px;">"Architected a RESTful API handling <b>500+</b> concurrent requests using Node.js and JWT auth."</p>
+      </div>
+      <div class="card">
+        <h4 style="font-size:16px;color:var(--teal-deep);">Quality</h4>
+        <p style="font-size:14.5px;color:var(--ink-soft);margin-top:8px;">"Achieved <b>85%</b> Jest coverage across 40+ components, cutting edge-case bugs before deploy."</p>
+      </div>
+    </div>
+    <div class="callout reveal" style="margin-top:22px;">
+      <span class="cico">🗂️</span>
+      <p><b>Build a "bullet vault":</b> write 8–10 refined bullets per role, stack-rank them by impact, and deploy only the top few — swapping others in to tailor each application. The rest stay in reserve.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- 5-LEVEL -->
+<section class="sec" id="levels">
+  <div class="wrap narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Level up any bullet</span>
+      <h2>The 5-level system: from task to ownership.</h2>
+      <p>Stack these layers to turn a flat task into a narrative of technical judgment.</p>
+    </div>
+    <div class="roadmap reveal">
+      <div class="step"><div class="num">1</div><span class="phase-tag">The task</span><h4>What you delivered</h4><p>"Built an API." The raw feature or system.</p></div>
+      <div class="step"><div class="num">2</div><span class="phase-tag">Technique</span><h4>The advanced practices</h4><p>Pagination, rate limiting, concurrency models, CI/CD automation, design patterns.</p></div>
+      <div class="step"><div class="num">3</div><span class="phase-tag">Tools</span><h4>The specific stack</h4><p>Go, gRPC, Kafka, Kubernetes — the concrete languages and infra.</p></div>
+      <div class="step"><div class="num">4</div><span class="phase-tag">Method</span><h4>How you worked</h4><p>"Leading cross-functional RFC discussions," "in an Agile environment."</p></div>
+      <div class="step"><div class="num">5</div><span class="phase-tag">Metric</span><h4>The XYZ payoff</h4><p>Attach the measurable result to prove it mattered.</p></div>
+    </div>
+    <div class="ba reveal" style="margin-top:32px;grid-template-columns:1fr;">
+      <div class="col bad"><span class="lab">✕ Level 1 only</span><blockquote>"Managed database migrations."</blockquote></div>
+      <div class="col good"><span class="lab">✓ All five levels</span><blockquote>"Engineered and migrated a legacy SQL database to PostgreSQL using asynchronous batching, cutting query latency <b>40%</b> and scaling to <b>25,000</b> concurrent users."</blockquote></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- TEMPLATES -->
+<section class="sec" id="templates">
+  <div class="wrap narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Don't design from scratch</span>
+      <h2>Free, battle-tested, ATS-safe templates.</h2>
+      <p>Aesthetics must never beat machine-readability. These give you structural integrity out of the box.</p>
+    </div>
+    <div class="res-list reveal">
+      <a class="res" href="https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs" target="_blank" rel="noopener">
+        <div class="ico">📄</div>
+        <div><span class="badge">LATEX · OVERLEAF</span><h4>Jake's Resume <span class="ext">↗</span></h4><p>The undisputed single-column standard for tech. Flawless text encoding, dense, one page. Free on Overleaf.</p></div>
+      </a>
+      <a class="res" href="https://www.overleaf.com/latex/templates/faangpath-simple-template/npsfpdqnxmbc" target="_blank" rel="noopener">
+        <div class="ico">📐</div>
+        <div><span class="badge">LATEX · OVERLEAF</span><h4>FAANGPath Simple <span class="ext">↗</span></h4><p>Minimalist, heavily ATS-optimized. Standard fonts, clean dividers, every inch used for content.</p></div>
+      </a>
+      <a class="res" href="https://careerservices.fas.harvard.edu/resources/harvard-college-resume-example/" target="_blank" rel="noopener">
+        <div class="ico">🎓</div>
+        <div><span class="badge">DOCX</span><h4>Harvard Resume <span class="ext">↗</span></h4><p>Text-only, single-column gold standard for business, finance &amp; consulting. Right-aligned dates, no pronouns.</p></div>
+      </a>
+      <a class="res" href="https://flowcv.com/" target="_blank" rel="noopener">
+        <div class="ico">🌊</div>
+        <div><span class="badge">WYSIWYG · FREE</span><h4>FlowCV <span class="ext">↗</span></h4><p>Genuinely free, no surprise export paywall. Enforces ATS-safe margins and single-column layout automatically.</p></div>
+      </a>
+      <a class="res" href="https://docs.google.com/" target="_blank" rel="noopener">
+        <div class="ico">📝</div>
+        <div><span class="badge">GOOGLE DOCS</span><h4>Modern Writer / Swiss / Serif <span class="ext">↗</span></h4><p>Built-in Docs templates that parse fine — just delete any underlying layout tables first.</p></div>
+      </a>
+      <a class="res" href="https://thegoodocs.com/" target="_blank" rel="noopener">
+        <div class="ico">🗃️</div>
+        <div><span class="badge">DOCX · FREE</span><h4>TheGoodocs <span class="ext">↗</span></h4><p>Hundreds of free ATS-friendly .docx templates, including Harvard &amp; Stanford institutional styles.</p></div>
+      </a>
+    </div>
+
+    <div class="callout reveal" style="margin-top:26px;">
+      <span class="cico">🔎</span>
+      <p><b>Check before you send:</b> tools like Jobscan, Resume Worded and PopResume cross-reference your resume against a specific job description to surface missing keywords. Aim for real alignment — not a robotic "score out of 100."</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec" style="padding-top:0;">
+  <div class="wrap">
+    <div class="cta reveal">
+      <span class="glow" style="background:var(--teal);top:-160px;left:-80px;"></span>
+      <span class="glow" style="background:var(--coral);bottom:-180px;right:-60px;"></span>
+      <span class="eyebrow" style="justify-content:center;">Resume sorted?</span>
+      <h2>Now let the agent find the 3 jobs worth it.</h2>
+      <p>You've beaten the bots. Don't spend the next month firing applications into the void. Tell Elip what you want and get an honest shortlist back.</p>
+      <div class="cta-btns">
+        <a class="btn btn-wa" href="https://tryelip.ai" target="_blank" rel="noopener">WhatsApp the agent →</a>
+        <a class="btn btn-ghost" href="index.html#tracks">Pick your track</a>
+      </div>
+      <p class="fine">free for job seekers · no signup · employers pay per hire</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="color:var(--paper);"><span class="dot"></span>elip <small style="color:rgba(251,248,241,.55);">/ resources</small></div>
+        <p class="tagline">A job agent in your chats — plus the free playbooks to get you interview-ready.</p>
+      </div>
+      <div><h5>Tracks</h5><a href="swe.html">Software Engineer</a><a href="pm.html">Product Manager</a><a href="consulting.html">Consultant</a><a href="analyst.html">Analyst</a></div>
+      <div><h5>Guides</h5><a href="resume.html#ats">Beat the ATS</a><a href="resume.html#xyz">XYZ formula</a><a href="resume.html#templates">Templates</a></div>
+      <div><h5>Product</h5><a data-wa-community href="#">Join the community</a><a data-elip-agent href="#">tryelip.ai</a><a href="index.html#elip">How the agent works</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Elip. Free for job seekers, always.</span>
+      <span class="mono">built for people the funnel forgot</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/gate.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Claude Code local settings
+.claude/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Local env / secrets
+.env
+.env.local
