@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Software Engineer Track — free CS, full-stack &amp; DSA roadmaps | elip resources</title>
+<meta name="description" content="The best free resources for software engineers: open-source CS degrees, full-stack roadmaps, DSA pattern prep, system design, and ATS-proof engineering resumes." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%230E9F6E'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/config.js"></script>
+</head>
+<body data-source="swe">
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span>elip <small>/ resources</small></a>
+    <nav class="nav-links">
+      <a class="nlink" href="index.html#tracks">Tracks</a>
+      <a class="nlink" href="resume.html">Resume Playbook</a>
+      <a class="nlink" href="index.html#villain">Why it's broken</a>
+      <a class="nlink" href="index.html#elip">The agent</a>
+      <a class="btn btn-wa btn-sm" data-wa-community href="#">💬 Join community</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<section class="thero">
+  <span class="blob" style="width:360px;height:360px;background:var(--teal-tint);top:-120px;right:-60px;"></span>
+  <div class="wrap">
+    <a class="back" href="index.html#tracks">← all tracks</a>
+    <span class="eyebrow">💻 Software Engineer</span>
+    <h1>Stop being a boilerplate<br/>programmer. Get hired.</h1>
+    <p class="lede">Technical skill is just the first threshold — the funnel is guarded by ATS filters and pattern-based interviews. Here's the full stack: open-source CS fundamentals, full-stack roadmaps, DSA that actually transfers, and a resume that parses.</p>
+    <div class="metabar">
+      <div><div class="k">Timeline</div><div class="v">Continuous, self-paced</div></div>
+      <div><div class="k">Core weapons</div><div class="v">CS depth + DSA patterns</div></div>
+      <div><div class="k">Resume metric</div><div class="v">Technical, not just business</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="jump">
+  <div class="wrap jump-inner">
+    <a href="#foundations">CS Foundations</a>
+    <a href="#fullstack">Full-Stack</a>
+    <a href="#tooling">Git &amp; Tooling</a>
+    <a href="#dsa">DSA / Interviews</a>
+    <a href="#system">System Design</a>
+    <a href="#resume">Resume &amp; ATS</a>
+  </div>
+</div>
+
+<!-- FOUNDATIONS -->
+<section class="sec" id="foundations">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Phase 1 · fundamentals</span>
+      <h2>Open-source CS degrees that rival a university.</h2>
+      <p>The difference between a framework operator and a real engineer is depth — OS, memory, data structures. These free curricula close that gap.</p>
+    </div>
+    <div class="res-list reveal">
+      <a class="res" href="https://teachyourselfcs.com/" target="_blank" rel="noopener">
+        <div class="ico">🧠</div><div><span class="badge">CURATED · HIGH ROI</span><h4>TeachYourselfCS <span class="ext">↗</span></h4><p>Nine core subjects — from SICP &amp; OSTEP to DDIA — each paired with the best textbook and free lecture series. The premier roadmap for self-taught depth.</p></div>
+      </a>
+      <a class="res" href="https://github.com/ossu/computer-science" target="_blank" rel="noopener">
+        <div class="ico">🎓</div><div><span class="badge">FULL DEGREE</span><h4>OSSU Computer Science <span class="ext">↗</span></h4><p>A complete, university-style CS degree from free MOOCs, with prerequisites and a progress spreadsheet. ~20 hrs/week over ~2 years.</p></div>
+      </a>
+      <a class="res" href="https://csprimer.com/" target="_blank" rel="noopener">
+        <div class="ico">⚙️</div><div><span class="badge">LEARN BY DOING</span><h4>CS Primer <span class="ext">↗</span></h4><p>Hands-on alternative to passive MOOCs — solve real problems from architecture to distributed systems, with staged walkthroughs when you hit friction.</p></div>
+      </a>
+      <a class="res" href="https://roadmap.sh/" target="_blank" rel="noopener">
+        <div class="ico">🗺️</div><div><span class="badge">VISUAL ROADMAPS</span><h4>roadmap.sh <span class="ext">↗</span></h4><p>Community-curated visual paths for Frontend, Backend, DevOps, AI agents &amp; more. Kills decision fatigue about what to learn next.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- FULLSTACK -->
+<section class="sec" id="fullstack" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Phase 2 · ship real software</span>
+      <h2>Full-stack roadmaps, ranked by friction.</h2>
+      <p>Fundamentals tell you how systems work. These get you shipping production code fast.</p>
+    </div>
+    <div class="res-list reveal">
+      <a class="res" href="https://www.theodinproject.com/" target="_blank" rel="noopener">
+        <div class="ico">🪓</div><div><span class="badge">HIGH FRICTION · HIGH REWARD</span><h4>The Odin Project <span class="ext">↗</span></h4><p>Local setup, command line and Git from lesson one. Deliberately vague projects with zero starter code build real engineering resilience.</p></div>
+      </a>
+      <a class="res" href="https://fullstackopen.com/en/" target="_blank" rel="noopener">
+        <div class="ico">🧩</div><div><span class="badge">MODERN STANDARD</span><h4>Full Stack Open (Helsinki) <span class="ext">↗</span></h4><p>React, Redux, Node, GraphQL, TypeScript, Docker, CI/CD, testing &amp; React Native. Arguably the most production-ready free curriculum.</p></div>
+      </a>
+      <a class="res" href="https://www.appacademy.io/course/app-academy-open" target="_blank" rel="noopener">
+        <div class="ico">🏫</div><div><span class="badge">1,500+ HOURS</span><h4>App Academy Open <span class="ext">↗</span></h4><p>A full 16-week bootcamp, free. Ruby on Rails, JS, React, Redux, Flask, Python, Docker, PostgreSQL — same curriculum as the paid program.</p></div>
+      </a>
+      <a class="res" href="https://www.freecodecamp.org/" target="_blank" rel="noopener">
+        <div class="ico">🔥</div><div><span class="badge">LOWEST BARRIER</span><h4>freeCodeCamp <span class="ext">↗</span></h4><p>Browser-based, no local setup. Certifications across responsive design, JS algorithms, front-end libraries, Python &amp; databases.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- TOOLING -->
+<section class="sec" id="tooling">
+  <div class="wrap narrow">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Phase 3 · the craft</span>
+      <h2>Git &amp; code quality — the stuff that separates pros.</h2>
+      <p>Over 93% of developers use Git. Move past <span class="mono">add</span> and <span class="mono">commit</span> into rebases, conflicts and idiomatic code.</p>
+    </div>
+    <div class="res-list reveal">
+      <a class="res" href="https://learngitbranching.js.org/" target="_blank" rel="noopener">
+        <div class="ico">🌳</div><div><span class="badge">VISUAL · GAMIFIED</span><h4>Learn Git Branching <span class="ext">↗</span></h4><p>Type commands, watch the commit graph update live. The clearest way to finally understand rebasing &amp; cherry-picking.</p></div>
+      </a>
+      <a class="res" href="https://gitimmersion.com/" target="_blank" rel="noopener">
+        <div class="ico">⌨️</div><div><span class="badge">CLI MUSCLE MEMORY</span><h4>Git Immersion <span class="ext">↗</span></h4><p>A guided, step-by-step tour through Git in the actual command line. No GUI abstraction.</p></div>
+      </a>
+      <a class="res" href="https://exercism.org/" target="_blank" rel="noopener">
+        <div class="ico">🧑‍🏫</div><div><span class="badge">FREE HUMAN MENTORS</span><h4>Exercism <span class="ext">↗</span></h4><p>57+ languages, local CLI workflow, and free volunteer mentors who review your code for idiomatic style — naming, magic numbers, built-in methods.</p></div>
+      </a>
+      <a class="res" href="https://ohmygit.org/" target="_blank" rel="noopener">
+        <div class="ico">🎮</div><div><span class="badge">GAME</span><h4>Oh My Git! <span class="ext">↗</span></h4><p>A playable game over a real repository — learn branching by manipulating actual Git history.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- DSA -->
+<section class="sec" id="dsa" style="background:var(--ink);color:var(--paper);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Phase 4 · the interview</span>
+      <h2 style="color:var(--paper);">Solve 150 problems by pattern, not 500 by brute force.</h2>
+      <p style="color:rgba(251,248,241,.75);">Aimlessly grinding LeetCode has brutal diminishing returns. Efficacy is pattern recognition — reading a problem's "signature" and reaching for the right tool.</p>
+    </div>
+
+    <div class="table-scroll reveal" style="margin-bottom:34px;">
+      <table class="tbl">
+        <thead><tr><th>Curation</th><th>Scope</th><th>Format</th><th>Best for</th></tr></thead>
+        <tbody>
+          <tr><td><b>Blind 75</b></td><td>75 essentials — core patterns</td><td>Pure list, no explanations</td><td>~4–6 weeks, minimum viable exposure</td></tr>
+          <tr><td><b>NeetCode 150</b></td><td>150 — adds Tries, Intervals, Bit Manip, Advanced Graphs</td><td>Deep video walkthroughs per problem</td><td>Visual learners, 6–8 weeks, full coverage</td></tr>
+          <tr><td><b>Striver's SDE Sheet</b></td><td>180+ most-asked at top firms</td><td>Written step-by-step, C++/Java</td><td>Text learners; huge in the Indian market</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid-2 reveal" style="gap:22px;">
+      <div class="card" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.1);color:var(--paper);">
+        <h3 style="color:var(--paper);font-size:20px;margin-bottom:14px;">Read the signature 🔍</h3>
+        <ul style="margin:0;padding-left:18px;color:rgba(251,248,241,.82);font-size:15px;line-height:1.9;">
+          <li><b>"Contiguous subarray/substring"</b> → Sliding Window</li>
+          <li><b>Merge sorted / reverse in place / palindrome</b> → Two Pointers</li>
+          <li><b>Detect a cycle in a linked list</b> → Fast &amp; Slow Pointers</li>
+          <li><b>Resolve dependencies / course schedule</b> → Topological Sort</li>
+          <li><b>"Maximize / minimize / number of ways"</b> → Dynamic Programming</li>
+        </ul>
+      </div>
+      <div>
+        <div class="res-list" style="grid-template-columns:1fr;">
+          <a class="res" href="https://neetcode.io/" target="_blank" rel="noopener" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);">
+            <div class="ico">▶️</div><div><h4 style="color:var(--paper);">NeetCode.io <span class="ext" style="color:rgba(251,248,241,.5);">↗</span></h4><p style="color:rgba(251,248,241,.7);">The 150 with intuition-first video walkthroughs.</p></div>
+          </a>
+          <a class="res" href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/" target="_blank" rel="noopener" style="background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);">
+            <div class="ico">📘</div><div><h4 style="color:var(--paper);">Striver's SDE Sheet <span class="ext" style="color:rgba(251,248,241,.5);">↗</span></h4><p style="color:rgba(251,248,241,.7);">180+ high-frequency problems, fully explained.</p></div>
+          </a>
+        </div>
+        <div class="callout reveal" style="margin-top:16px;background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);border-left-color:var(--amber);">
+          <span class="cico">🎤</span><p style="color:rgba(251,248,241,.85);">After the core list, don't grind random problems. Switch to <b>company-tagged</b> questions and <b>mock interviews</b> — most candidates fail on communication under pressure, not problem-solving.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- SYSTEM DESIGN -->
+<section class="sec" id="system">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Phase 5 · scale</span>
+      <h2>System design: architect for the predictable bottlenecks.</h2>
+      <p>Every scaling story is the same four walls. Know the wall, know the fix.</p>
+    </div>
+    <div class="grid-2 reveal" style="margin-bottom:30px;">
+      <a class="res" href="https://github.com/donnemartin/system-design-primer" target="_blank" rel="noopener">
+        <div class="ico">📚</div><div><span class="badge">270k★ · WRITTEN REFERENCE</span><h4>System Design Primer <span class="ext">↗</span></h4><p>The definitive open-source library: CAP theorem, CDNs, L4/L7 load balancing, replication &amp; sharding, plus Anki flashcards.</p></div>
+      </a>
+      <a class="res" href="https://blog.bytebytego.com/" target="_blank" rel="noopener">
+        <div class="ico">🎨</div><div><span class="badge">VISUAL</span><h4>ByteByteGo / Alex Xu <span class="ext">↗</span></h4><p>Free newsletter &amp; YouTube breakdowns of real architectures (YouTube, URL shortener, notifications). Fastest way to build design vocabulary.</p></div>
+      </a>
+    </div>
+    <div class="grid-2 reveal">
+      <div class="card"><h4 style="font-size:16px;">🧱 Too many users</h4><p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Servers hit RPS limits → <b>load balancers</b> across replicated stateless app servers.</p></div>
+      <div class="card"><h4 style="font-size:16px;">💾 Too much data</h4><p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Vertical scaling fails → <b>database sharding</b> by a logical key (e.g. user_id).</p></div>
+      <div class="card"><h4 style="font-size:16px;">🐌 High latency</h4><p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Heavy writes exceed 500ms → <b>async processing</b> with message queues (Kafka, RabbitMQ).</p></div>
+      <div class="card"><h4 style="font-size:16px;">🔀 Inconsistent state</h4><p style="color:var(--ink-soft);font-size:14.5px;margin-top:6px;">Replication causes stale reads → design for <b>eventual vs strong consistency</b> trade-offs.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- RESUME -->
+<section class="sec" id="resume" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The engineering resume</span>
+      <h2>Measure the engine. Then survive the 6-second scan.</h2>
+      <p>The universal <a href="resume.html" style="color:var(--teal-deep);font-weight:600;">Resume Playbook</a> covers ATS mechanics and the XYZ formula. Here's what's specific to engineers.</p>
+    </div>
+
+    <div class="grid-2 reveal" style="align-items:start;gap:32px;">
+      <div>
+        <h3 style="font-size:22px;margin-bottom:16px;">Keywords engineers must mirror exactly</h3>
+        <div class="card">
+          <p style="margin:0 0 10px;font-size:14px;color:var(--ink-faint);font-family:var(--font-mono);">THE ATS DOESN'T DO SYNONYMS</p>
+          <div class="pill-list">
+            <span class="chip">React.js (not ReactJS)</span><span class="chip">Kubernetes (not k8s)</span><span class="chip">JavaScript (not JS)</span><span class="chip">CI/CD</span><span class="chip">REST APIs</span><span class="chip">PostgreSQL</span><span class="chip">Docker</span><span class="chip">gRPC</span><span class="chip">Amazon Web Services (AWS)</span>
+          </div>
+          <p style="margin:16px 0 0;font-size:14.5px;color:var(--ink-soft);">Include both the acronym and the full term, and keep an explicit comma-separated <b>Skills</b> section — the parser weights it heavily.</p>
+        </div>
+        <div class="callout reveal" style="margin-top:18px;">
+          <span class="cico">🧱</span><p><b>LaTeX is your friend.</b> It enforces single-column structure and produces mathematically flawless text encoding — every character machine-readable. Jake's Resume &amp; FAANGPath are the standards.</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size:22px;margin-bottom:16px;">Junior? Measure technical impact</h3>
+        <div class="ba" style="grid-template-columns:1fr;">
+          <div class="col bad"><span class="lab">✕ Task</span><blockquote>"Built REST APIs using Spring Boot and MySQL."</blockquote></div>
+          <div class="col good"><span class="lab">✓ Technical metric</span><blockquote>"Architected a RESTful API processing <b>500+</b> concurrent requests via Node.js &amp; JWT auth."</blockquote></div>
+          <div class="col good"><span class="lab">✓ Quality metric</span><blockquote>"Achieved <b>85%</b> Jest coverage across 40+ components, cutting edge-case bugs before deploy."</blockquote></div>
+        </div>
+        <a class="btn btn-teal" style="margin-top:20px;" href="resume.html#xyz">Full XYZ + 5-level guide →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec" style="padding-top:0;padding-bottom:60px;">
+  <div class="wrap">
+    <div class="cta reveal">
+      <span class="glow" style="background:var(--teal);top:-160px;left:-80px;"></span>
+      <span class="glow" style="background:var(--violet);bottom:-180px;right:-60px;"></span>
+      <span class="eyebrow" style="justify-content:center;">Ready to apply?</span>
+      <h2>Skip the ATS black hole entirely.</h2>
+      <p>You've got the skills and a resume that parses. Now let the agent scan ~16M postings and DM you the 3 engineering roles actually worth your time.</p>
+      <div class="cta-btns">
+        <a class="btn btn-wa" href="https://tryelip.ai" target="_blank" rel="noopener">WhatsApp the agent →</a>
+        <a class="btn btn-ghost" href="resume.html">Fix my resume first</a>
+      </div>
+      <p class="fine">free for job seekers · no signup · employers pay per hire</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="brand" style="color:var(--paper);"><span class="dot"></span>elip <small style="color:rgba(251,248,241,.55);">/ resources</small></div><p class="tagline">A job agent in your chats — plus the free playbooks to get you interview-ready.</p></div>
+      <div><h5>Tracks</h5><a href="swe.html">Software Engineer</a><a href="pm.html">Product Manager</a><a href="consulting.html">Consultant</a><a href="analyst.html">Analyst</a></div>
+      <div><h5>Guides</h5><a href="resume.html#ats">Beat the ATS</a><a href="resume.html#xyz">XYZ formula</a><a href="resume.html#templates">Templates</a></div>
+      <div><h5>Product</h5><a data-wa-community href="#">Join the community</a><a data-elip-agent href="#">tryelip.ai</a><a href="index.html#elip">How the agent works</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Elip. Free for job seekers, always.</span><span class="mono">built for people the funnel forgot</span></div>
+  </div>
+</footer>
+
+<script src="assets/gate.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
